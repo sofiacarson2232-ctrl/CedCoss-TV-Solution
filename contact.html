@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Customer Assistance | CedCoss TV Solution</title>
+  <meta name="description" content="Get in touch with CedCoss TV Solution. Contact our customer assistance team for activation help, device configuration assistance, and membership inquiries.">
+  <meta name="keywords" content="contact streaming assistance, tv activation help, concierge setup assistance, streaming contact us">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- Top Independent Disclaimer Bar -->
+  <div class="disclaimer-strip">
+    <div class="container">
+      <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance.
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+        <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="broadcast-tv.html" class="nav-link">Live TV</a>
+        <a href="sports-hub.html" class="nav-link">Sports</a>
+        <a href="pricing-plans.html" class="nav-link">Plans</a>
+        <a href="activationhelp.html" class="nav-link">Activation Help</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pricing-plans.html" class="btn btn-primary btn-sm">Explore Passes</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Assistance Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Get In Touch</div>
+        <h1>Contact Us & <span class="hero-highlight">Assistance</span></h1>
+        <p>Have an activation question, device setup request, or billing inquiry? Send us a message and our team will get back to you promptly.</p>
+      </div>
+
+      <div class="support-layout">
+        <!-- Help Info & Channels -->
+        <div class="support-info-card">
+          <h3 style="margin-bottom: 24px;">Direct Help Channels</h3>
+
+          <div class="support-item">
+            <div class="support-icon">📍</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Registered Office Address</h4>
+              <p style="margin: 0; font-size: 0.92rem; line-height: 1.5;">3/460, Vishwas Khand Rd, Opposite to Nehru Enclave, Vishwas Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</p>
+            </div>
+          </div>
+
+          <div class="support-item">
+            <div class="support-icon">✉️</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Email Assistance Desk</h4>
+              <p style="margin: 0; font-size: 0.92rem;"><a href="mailto:info@cedcoss.online" style="color: var(--text-main); text-decoration: none;">info@cedcoss.online</a></p>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">Monitored 24 hours a day, 7 days a week.</div>
+            </div>
+          </div>
+
+          <div class="support-item">
+            <div class="support-icon">⚡</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Rapid Activation Desk</h4>
+              <p style="margin: 0; font-size: 0.92rem;">Instant credential processing</p>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">Credentials delivered within 15 minutes of pass selection.</div>
+            </div>
+          </div>
+
+          <div class="support-item">
+            <div class="support-icon">🛠️</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Setup & Activation Concierge</h4>
+              <p style="margin: 0; font-size: 0.92rem;">Step-by-step assistance</p>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">Guidance for Firestick, Smart TVs, and Apple devices.</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 36px; padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); border-radius: var(--radius-md);">
+            <h4 style="font-size: 0.96rem; margin-bottom: 8px;">Quick Self-Service Check:</h4>
+            <p style="font-size: 0.86rem; margin: 0; line-height: 1.6;">
+              Experiencing a brief buffering hiccup? Often, restarting your Wi-Fi router or refreshing the playlist inside your media app resolves 95% of connectivity delays.
+            </p>
+          </div>
+        </div>
+
+        <!-- Assistance Inquiry Form -->
+        <div class="support-form-card">
+          <h3 style="margin-bottom: 20px;">Send Us A Message</h3>
+
+          <div class="success-state" id="supportSuccessMsg" style="padding: 20px 0;" hidden>
+            <div class="success-icon">✓</div>
+            <h3>Message Sent Successfully!</h3>
+            <p style="color: var(--text-muted); margin-top: 10px;">
+              Thank you for reaching out. A customer assistance concierge has been assigned to your ticket and will reply via email shortly.
+            </p>
+          </div>
+
+          <form id="supportInquiryForm">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Full Name *</label>
+              <input type="text" id="contactName" class="form-control" placeholder="e.g. Alex Johnson" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Your Email Address *</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactDevice">Device in Use</label>
+              <select id="contactDevice" class="form-control">
+                <option value="Amazon Fire TV / Firestick">Amazon Fire TV / Firestick</option>
+                <option value="Samsung / LG Smart TV">Samsung / LG Smart TV</option>
+                <option value="Apple TV / iPhone / iPad">Apple TV / iPhone / iPad</option>
+                <option value="Android TV / Smartphone">Android TV / Smartphone</option>
+                <option value="Computer (PC / Mac)">Computer (PC / Mac)</option>
+                <option value="General Inquiry">General Question / Pre-Sale</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactSubject">Subject *</label>
+              <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Help setting up on Fire Stick" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message Details *</label>
+              <textarea id="contactMessage" class="form-control" rows="5" placeholder="Describe how we can assist you..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="supportSubmitBtn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Quick Answers</div>
+        <h2>Help & Assistance FAQ</h2>
+        <p>Instant answers to frequent questions regarding accounts and playback.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How fast do I receive my streaming access?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our automation and concierge team immediately process orders upon submission. Account credentials, server addresses, and tailored setup guides are dispatched via email within 15 minutes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I switch devices after initial setup?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. You can install your media player on your TV, phone, and tablet. However, the number of screens that can watch simultaneously depends on your pass tier (1 screen on Starter, 2 on Quarterly/Semi-Annual, Multi-Screen on Annual).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What should I do if a channel won't load?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>First, test your internet speed and reboot your streaming application. If an individual channel stream is unresponsive, our redundant server network automatically reroutes the feed within minutes. You can also reach our assistance desk for immediate refresh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+            <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+          </a>
+          <p>
+            Delivering modern, high-definition digital streaming entertainment, live sports arenas, and real-time broadcasts across all personal media devices worldwide.
+          </p>
+          <div style="font-size: 0.84rem; color: var(--text-dim); margin-top: 14px; line-height: 1.6;">
+            <div>📍 <strong>Office Address:</strong> 3/460, Vishwas Khand Rd, Opposite to Nehru Enclave, Vishwas Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</div>
+            <div style="margin-top: 4px;">✉️ <strong>Email:</strong> <a href="mailto:info@cedcoss.online" style="color: var(--accent-orange);">info@cedcoss.online</a></div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="broadcast-tv.html">Live Broadcasts</a></li>
+            <li><a href="sports-hub.html">Sports Arena</a></li>
+            <li><a href="pricing-plans.html">Membership Passes</a></li>
+            <li><a href="activationhelp.html">Activation Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Assistance</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="activationhelp.html">Device Activation</a></li>
+            <li><a href="pricing-plans.html">Subscription Passes</a></li>
+            <li><a href="contact.html#faq">FAQ Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Policy & Compliance</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="refund-policy.html">Refund & Cancellation</a></li>
+            <li><a href="disclaimer.html">DMCA & Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Google Compliant Mandatory Transparency Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance. All brand names, trademarks, logos, and registered emblems referenced on this site are the exclusive intellectual property of their rightful corporate owners. Displaying these names denotes technical hardware compatibility and does not imply official endorsement, direct sponsorship, or corporate affiliation.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span class="dynamic-year"></span> CedCoss TV Solution. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund-policy.html">Refunds</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/plans-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

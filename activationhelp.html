@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Activation Help | CedCoss TV Solution</title>
+  <meta name="description" content="Quick and secure device activation help for your Smart TV, streaming stick, or media player. Enter your activation code and phone number for instant setup verification.">
+  <meta name="keywords" content="streaming device activation help, smart TV activation assistance, TV activation code help, streaming setup service, activate streaming app on TV">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <style>
+    /* Light Theme Styling for Activation Help Page */
+    body.act-light-theme {
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+    }
+
+    body.act-light-theme .site-header {
+      background: #ffffff !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    body.act-light-theme .brand-link {
+      color: #0f172a !important;
+    }
+
+    body.act-light-theme .nav-link {
+      color: #334155 !important;
+    }
+
+    body.act-light-theme .nav-link:hover,
+    body.act-light-theme .nav-link.active {
+      color: var(--accent-orange) !important;
+    }
+
+    body.act-light-theme .mobile-toggle span {
+      background: #0f172a !important;
+    }
+
+    .act-disclaimer-strip {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 10px 0;
+      font-size: 12px;
+      color: #475569;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .act-disclaimer-strip strong {
+      color: #0f172a;
+    }
+
+    .act-wrap {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 36px 18px 60px;
+    }
+
+    .act-strip {
+      background: #1e3a5f;
+      padding: 9px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .act-dot-live {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 10px #22c55e;
+      animation: actPulse 1.8s infinite;
+    }
+
+    @keyframes actPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .act-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0f172a;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .act-sub {
+      font-size: 14px;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .act-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      padding: 28px 24px;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      margin-bottom: 20px;
+    }
+
+    .act-code-input {
+      width: 100%;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 17px;
+      font-weight: 600;
+      text-align: center;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 15px 12px;
+      color: #0f172a;
+      text-transform: uppercase;
+      outline: none;
+      background: #f8fafc;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+      margin-bottom: 14px;
+    }
+
+    .act-code-input:focus {
+      border-color: var(--accent-orange);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.18);
+    }
+
+    .act-code-input::placeholder {
+      letter-spacing: normal;
+      color: #94a3b8;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .act-where {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+    }
+
+    .act-where p {
+      font-size: 12px;
+      color: #92400e;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .act-where strong {
+      color: #78350f;
+    }
+
+    .act-phone-group {
+      margin-bottom: 16px;
+    }
+
+    .act-phone-input {
+      width: 100%;
+      font-size: 15px;
+      padding: 14px 14px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      color: #0f172a;
+      outline: none;
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .act-phone-input:focus {
+      border-color: var(--accent-orange);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.18);
+      background: #ffffff;
+    }
+
+    .act-phone-input::placeholder {
+      color: #94a3b8;
+      font-size: 15px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .act-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--accent-orange), #ea580c);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.15s, filter 0.15s, opacity 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .act-btn:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    .act-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .act-lock-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 14px;
+    }
+
+    /* Help Banner Card */
+    .act-help-card {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .act-hc-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .act-hc-icon {
+      width: 36px;
+      height: 36px;
+      background: #dbeafe;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e40af;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .act-hc-text strong {
+      font-size: 13.5px;
+      color: #1e3a8a;
+      display: block;
+    }
+
+    .act-hc-text span {
+      font-size: 12px;
+      color: #2563eb;
+    }
+
+    .act-hc-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-orange);
+      text-decoration: none;
+    }
+
+    .act-hc-link:hover {
+      text-decoration: underline;
+    }
+
+    /* SEO / Informational Section */
+    .act-seo {
+      border-top: 1px solid #e2e8f0;
+      margin-top: 24px;
+      padding-top: 28px;
+    }
+
+    .act-seo h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .act-seo h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 18px 0 8px;
+    }
+
+    .act-seo p {
+      font-size: 12.5px;
+      color: #475569;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .act-seo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .act-seo-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .act-seo-item strong {
+      font-size: 13px;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .act-seo-item span {
+      font-size: 11.5px;
+      color: #64748b;
+      line-height: 1.5;
+      display: block;
+    }
+
+    /* In-page Success Notification */
+    .act-success-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .act-success-box h3 {
+      color: #15803d;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .act-success-box p {
+      font-size: 13px;
+      color: #166534;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 480px) {
+      .act-seo-grid {
+        grid-template-columns: 1fr;
+      }
+      .act-title {
+        font-size: 22px;
+      }
+      .act-card {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body class="act-light-theme">
+
+  <!-- Top Independent Disclaimer Bar -->
+  <div class="act-disclaimer-strip">
+    <div class="container">
+      <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance.
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+        <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="broadcast-tv.html" class="nav-link">Live TV</a>
+        <a href="sports-hub.html" class="nav-link">Sports</a>
+        <a href="pricing-plans.html" class="nav-link">Plans</a>
+        <a href="activationhelp.html" class="nav-link active">Activation Help</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pricing-plans.html" class="btn btn-primary btn-sm">Explore Passes</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Concierge Strip -->
+  <div class="act-strip">
+    <span style="display:inline-flex; align-items:center; gap:6px;">
+      <span class="act-dot-live"></span>
+      <span style="color: #ffffff; font-weight: 600;">Specialists Available Now</span>
+    </span>
+    <span>&bull;</span>
+    <span>Rapid Setup Assistance:</span>
+    <a href="mailto:info@cedcoss.online" style="color: #fdba74; font-weight: 600; text-decoration: none;">info@cedcoss.online</a>
+  </div>
+
+  <!-- Main Activation Help Container -->
+  <main class="act-wrap">
+
+    <h1 class="act-title">Enter Your Activation Code</h1>
+    <p class="act-sub">Type the code shown on your TV or media device screen. A concierge specialist will verify and configure your session.</p>
+
+    <!-- Activation Code & Phone Form Card -->
+    <div class="act-card">
+      <form id="activationHelpForm">
+        
+        <!-- Code Section (Placeholder only, no form heading) -->
+        <input 
+          type="text" 
+          class="act-code-input" 
+          id="actCodeInput" 
+          maxlength="16" 
+          placeholder="Device Activation Code" 
+          autocomplete="off" 
+          spellcheck="false" 
+          required 
+        />
+
+        <!-- Phone Number Section directly under Activation Code (Placeholder only, no form heading) -->
+        <div class="act-phone-group">
+          <input 
+            type="tel" 
+            class="act-phone-input" 
+            id="actPhoneInput" 
+            placeholder="Enter Your Phone Number" 
+            autocomplete="tel" 
+            required 
+          />
+        </div>
+
+        <button type="submit" class="act-btn" id="actSubmitBtn">
+          <span>Verify & Activate Device</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <div class="act-lock-row">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Encrypted Session &bull; Private & Secure Verification</span>
+        </div>
+      </form>
+
+      <!-- Success Confirmation State (shown upon submission) -->
+      <div id="actSuccessState" class="act-success-box" hidden>
+        <h3>Request Submitted Successfully! 🎉</h3>
+        <p>
+          Your pairing code <strong id="submittedCodeBadge" style="color:#0f172a; font-family: 'JetBrains Mono', monospace;"></strong> has been linked to your contact number <strong id="submittedPhoneBadge" style="color:#0f172a;"></strong>.
+        </p>
+        <p style="margin-top: 8px;">
+          Our setup concierge is processing your device handshake. You will receive an instant confirmation update shortly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Help Banner -->
+    <div class="act-help-card">
+      <div class="act-hc-left">
+        <div class="act-hc-icon">💬</div>
+        <div class="act-hc-text">
+          <strong>Cannot find your on-screen code?</strong>
+          <span>Our concierge team is available to assist you anytime</span>
+        </div>
+      </div>
+      <a href="mailto:info@cedcoss.online" class="act-hc-link">info@cedcoss.online</a>
+    </div>
+
+    <!-- Informational / SEO Guidance Section -->
+    <section class="act-seo">
+      <h2>Professional Streaming Device Activation Assistance</h2>
+      <p>
+        CedCoss TV Solution provides streamlined assistance for pairing your consumer media players and smart display systems. Our setup specialists guide you through every milestone of playlist configuration and authorization so you can enjoy your entertainment without interruptions.
+      </p>
+
+      <div class="act-seo-grid">
+        <div class="act-seo-item">
+          <strong>Smart TV Activation</strong>
+          <span>Reliable setup guidance across Samsung Tizen, LG webOS, and Android TV displays.</span>
+        </div>
+        <div class="act-seo-item">
+          <strong>Streaming Player Pairing</strong>
+          <span>Step-by-step assistance for Fire TV sticks, Apple TV, Chromecast, and set-top boxes.</span>
+        </div>
+        <div class="act-seo-item">
+          <strong>App Parameter Sync</strong>
+          <span>Assistance entering server URLs, M3U playlists, and authentication tokens securely.</span>
+        </div>
+        <div class="act-seo-item">
+          <strong>Rapid Resolution</strong>
+          <span>Most pairing sessions are confirmed and active in under 15 minutes.</span>
+        </div>
+      </div>
+
+      <h3>How Code-Based Device Activation Works</h3>
+      <p>
+        When you install an IPTV player or streaming media app on a connected TV, a temporary alphanumeric authentication code appears on screen. Entering that code here links your hardware identifier with your active CedCoss TV Solution subscription tier, eliminating the need to type lengthy passwords with a TV remote.
+      </p>
+
+      <h3>Common Activation Hurdles We Address</h3>
+      <p>
+        Common stumbling blocks include playlist cache timeouts, local network DNS filtering, unexpected pairing code expiry, or mismatched audio/video codecs. Our concierge team assists you in clearing cache buffers and ensuring smooth, stutter-free playback.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+            <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+          </a>
+          <p>
+            Delivering modern, high-definition digital streaming entertainment, live sports arenas, and real-time broadcasts across all personal media devices worldwide.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+            <p><strong>📍 Office Address:</strong> 3/460, Vishwas Khand Rd, Opposite to Nehru Enclave, Vishwas Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</p>
+            <p style="margin-top: 0.4rem;"><strong>✉️ Email:</strong> <a href="mailto:info@cedcoss.online" style="color: var(--accent-orange);">info@cedcoss.online</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="broadcast-tv.html">Live Broadcasts</a></li>
+            <li><a href="sports-hub.html">Sports Arena</a></li>
+            <li><a href="pricing-plans.html">Membership Passes</a></li>
+            <li><a href="activationhelp.html">Activation Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Assistance</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="activationhelp.html">Device Activation</a></li>
+            <li><a href="pricing-plans.html">Subscription Passes</a></li>
+            <li><a href="contact.html#faq">FAQ Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Policy & Compliance</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="refund-policy.html">Refund & Cancellation</a></li>
+            <li><a href="disclaimer.html">DMCA & Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance. All brand names, trademarks, logos, and registered emblems referenced on this site are the exclusive intellectual property of their rightful corporate owners. Displaying these names denotes technical hardware compatibility and does not imply official endorsement, direct sponsorship, or corporate affiliation.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span class="dynamic-year"></span> CedCoss TV Solution. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund-policy.html">Refunds</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Activation Code & Phone Submission Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('activationHelpForm');
+      const codeInput = document.getElementById('actCodeInput');
+      const phoneInput = document.getElementById('actPhoneInput');
+      const submitBtn = document.getElementById('actSubmitBtn');
+      const successBox = document.getElementById('actSuccessState');
+      const codeBadge = document.getElementById('submittedCodeBadge');
+      const phoneBadge = document.getElementById('submittedPhoneBadge');
+
+      if (!form) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const code = codeInput.value.trim().toUpperCase();
+        const phone = phoneInput.value.trim();
+
+        if (code.length < 4 || phone.length < 7) {
+          alert('Please enter a valid activation code and phone number.');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Verifying Session...</span>';
+
+        setTimeout(() => {
+          window.location.href = 'activation-pending.html?code=' + encodeURIComponent(code) + '&phone=' + encodeURIComponent(phone);
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>

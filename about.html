@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | CedCoss TV Solution - Independent Service Provider</title>
+  <meta name="description" content="Learn about CedCoss TV Solution, an independent digital streaming pass management and device configuration assistance provider. Discover who we are, our mission, vision, and core values.">
+  <meta name="keywords" content="about cedcoss tv solution, independent service provider, streaming concierge, digital media setup, our mission, why choose us">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <style>
+    /* Custom Styling for About Page */
+    .about-hero {
+      padding: 60px 0 44px;
+      text-align: center;
+    }
+    .about-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      background: rgba(124, 107, 255, 0.12);
+      border: 1px solid rgba(124, 107, 255, 0.3);
+      color: #a5b4fc;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Independent Service Provider Callout Card */
+    .independent-callout {
+      background: #0d121f;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin: 36px auto;
+      max-width: 900px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .independent-callout::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-orange);
+    }
+    .independent-badge-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: 6px;
+      background: rgba(255, 122, 69, 0.15);
+      color: var(--accent-orange);
+      border: 1px solid rgba(255, 122, 69, 0.3);
+      margin-bottom: 14px;
+    }
+    .independent-callout h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .independent-callout p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    /* Two Column Story Grid */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin: 48px 0;
+    }
+    .story-copy h2 {
+      font-size: 1.85rem;
+      margin-bottom: 18px;
+    }
+    .story-copy p {
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .story-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .stat-pill {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-pill .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .stat-pill .lbl {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Mission & Vision Cards */
+    .mission-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .mv-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      transition: all 0.25s ease;
+    }
+    .mv-card:hover {
+      border-color: rgba(124, 107, 255, 0.4);
+      transform: translateY(-3px);
+    }
+    .mv-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .mv-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+    .mv-card p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Why Choose Us Grid */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin: 40px 0;
+    }
+    .why-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: all 0.25s ease;
+    }
+    .why-card:hover {
+      border-color: rgba(255, 122, 69, 0.35);
+      transform: translateY(-2px);
+    }
+    .why-icon-badge {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .why-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    .why-card p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    @media (max-width: 860px) {
+      .story-grid, .mission-vision-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Independent Disclaimer Bar -->
+  <div class="disclaimer-strip">
+    <div class="container">
+      <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance.
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+        <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="broadcast-tv.html" class="nav-link">Live TV</a>
+        <a href="sports-hub.html" class="nav-link">Sports</a>
+        <a href="pricing-plans.html" class="nav-link">Plans</a>
+        <a href="activationhelp.html" class="nav-link">Activation Help</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pricing-plans.html" class="btn btn-primary btn-sm">Explore Passes</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section about-hero">
+    <div class="container">
+      <div class="about-hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Who We Are & What We Stand For
+      </div>
+      <h1 style="max-width: 840px; margin: 0 auto;">
+        Independent Digital Media Pass Management <span class="hero-highlight">Built on Trust</span>
+      </h1>
+      <p style="max-width: 720px; margin: 18px auto 0; font-size: 1.05rem;">
+        CedCoss TV Solution delivers straightforward digital streaming entertainment, transparent subscription pass management, and dedicated setup assistance to viewers worldwide.
+      </p>
+
+      <!-- Prominent Independent Service Notice -->
+      <div class="independent-callout">
+        <span class="independent-badge-tag">Independent Service Notice</span>
+        <h3>We Are An Independent Service Provider</h3>
+        <p>
+          CedCoss TV Solution operates as a strictly <strong>independent service provider</strong> and is not affiliated with, endorsed by, or sponsored by any third-party brand, hardware manufacturer, or corporate media conglomerate. We provide independent setup assistance, digital pass management, and streaming protocol connectivity for consumer media devices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-copy">
+          <div class="section-tag">Who We Are</div>
+          <h2>Simplifying High-Definition Entertainment Across All Screens</h2>
+          <p>
+            Established with a vision for consumer freedom and transparent media access, <strong>CedCoss TV Solution</strong> began as a digital guidance and media setup initiative for cord-cutters seeking flexible streaming access and simplified device configurations.
+          </p>
+          <p>
+            Today, we serve thousands of households worldwide as an <strong>independent digital streaming service provider</strong>. We combine redundant cloud streaming server architecture with personalized, patient customer concierge assistance—ensuring every subscriber gets up and running in under 5 minutes without setup headaches.
+          </p>
+          <p>
+            Unlike legacy television providers, we operate with 100% transparent upfront billing, zero surprise renewal fees, and an unwavering commitment to buffer-free 60 FPS sports and 4K broadcasts.
+          </p>
+
+          <div class="story-stats">
+            <div class="stat-pill">
+              <span class="num">99.9%</span>
+              <span class="lbl">Server Target Uptime</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">&lt; 15m</span>
+              <span class="lbl">Avg. Ticket Response</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">15K+</span>
+              <span class="lbl">Satisfied Households</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">100%</span>
+              <span class="lbl">Independent Provider</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="assets/images/hero-home.jpg" alt="CedCoss TV Solution independent digital entertainment experience" style="border-radius: var(--radius-lg); border: 1px solid var(--card-border); box-shadow: var(--shadow-card); width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission & Our Vision -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 36px;">
+        <div class="section-tag">Guiding Principles</div>
+        <h2>Our Mission & Vision</h2>
+        <p>The core values and forward-looking commitment that guide everything we do at CedCoss TV Solution.</p>
+      </div>
+
+      <div class="mission-vision-grid">
+        <!-- Our Mission -->
+        <div class="mv-card">
+          <div class="mv-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to empower viewers worldwide by providing accessible, reliable, high-definition digital streaming entertainment backed by transparent one-time pricing and compassionate 24/7 human customer assistance. We believe premium entertainment should be easy to set up, buffer-free, and completely free from hidden contractual traps.
+          </p>
+        </div>
+
+        <!-- Our Vision -->
+        <div class="mv-card">
+          <div class="mv-icon">🔭</div>
+          <h3>Our Vision</h3>
+          <p>
+            Our vision is to become the most trusted and transparent independent digital media service provider globally. We aim to set the industry standard for customer-centric concierge service, robust multi-device protocol compatibility, and ethical independent operations that place the viewer’s freedom and satisfaction first.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center" style="max-width: 680px; margin: 0 auto 36px;">
+        <div class="section-tag">The CedCoss Difference</div>
+        <h2>Why Choose Us?</h2>
+        <p>Here is why thousands of viewers trust CedCoss TV Solution as their independent streaming subscription partner.</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- 1 -->
+        <div class="why-card">
+          <span class="why-icon-badge">🛡️</span>
+          <h4>100% Independent Provider</h4>
+          <p>We are a dedicated independent service provider with no corporate manufacturer lock-in. Our advice and setup assistance are purely focused on what works best for your setup.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="why-card">
+          <span class="why-icon-badge">💳</span>
+          <h4>Zero Hidden Auto-Renewals</h4>
+          <p>All passes are one-time, upfront purchases. We never secretly enroll your card into unexpected recurring monthly debits. You choose when you want to renew.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="why-card">
+          <span class="why-icon-badge">⚡</span>
+          <h4>High-Availability Architecture</h4>
+          <p>Our streams run on redundant, multi-location server clusters engineered to maintain 99.9% uptime, even during massive global championship sports events.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="why-card">
+          <span class="why-icon-badge">🤝</span>
+          <h4>24/7 Human Setup Concierge</h4>
+          <p>No frustrating automated loops. Real, knowledgeable concierge specialists are standing by round-the-clock via email and live desk to guide your device pairing.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="why-card">
+          <span class="why-icon-badge">📺</span>
+          <h4>Universal Hardware Compatibility</h4>
+          <p>Compatible with standard media players across Smart Displays, HDMI streaming sticks, dedicated media boxes, mobile phones, tablets, and desktop browsers.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="why-card">
+          <span class="why-icon-badge">✨</span>
+          <h4>7-Day Satisfaction Guarantee</h4>
+          <p>Try our service with zero risk. If our concierge team is unable to establish smooth playback on your compatible device within 7 days, you receive a full refund.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="section">
+    <div class="container">
+      <div style="background: var(--card); border: 1px solid rgba(124, 107, 255, 0.35); border-radius: var(--radius-lg); padding: 48px 32px; text-align: center; max-width: 860px; margin: 0 auto;">
+        <h2 style="font-size: 2rem; margin-bottom: 12px;">Ready to Experience Next-Generation Streaming?</h2>
+        <p style="max-width: 600px; margin: 0 auto 28px; color: var(--text-muted); font-size: 1rem;">
+          Explore our transparent entertainment passes or connect directly with our 24/7 independent concierge team for personalized setup guidance.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+          <a href="pricing-plans.html" class="btn btn-primary">Explore Membership Passes</a>
+          <a href="contact.html" class="btn btn-outline">Contact Assistance Desk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/icons/favicon.svg" alt="CedCoss TV Solution Logo" class="brand-logo">
+            <span>CedCoss <span style="color: var(--accent-orange);">TV Solution</span></span>
+          </a>
+          <p>
+            Delivering modern, high-definition digital streaming entertainment, live sports arenas, and real-time broadcasts across all personal media devices worldwide.
+          </p>
+          <div style="font-size: 0.84rem; color: var(--text-dim); margin-top: 14px; line-height: 1.6;">
+            <div>📍 <strong>Office Address:</strong> 3/460, Vishwas Khand Rd, Opposite to Nehru Enclave, Vishwas Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</div>
+            <div style="margin-top: 4px;">✉️ <strong>Email:</strong> <a href="mailto:info@cedcoss.online" style="color: var(--accent-orange);">info@cedcoss.online</a></div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="broadcast-tv.html">Live Broadcasts</a></li>
+            <li><a href="sports-hub.html">Sports Arena</a></li>
+            <li><a href="pricing-plans.html">Membership Passes</a></li>
+            <li><a href="activationhelp.html">Activation Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Assistance</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="activationhelp.html">Device Activation</a></li>
+            <li><a href="pricing-plans.html">Subscription Passes</a></li>
+            <li><a href="contact.html#faq">FAQ Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Policy & Compliance</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="refund-policy.html">Refund & Cancellation</a></li>
+            <li><a href="disclaimer.html">DMCA & Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Google Compliant Mandatory Transparency Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>Disclaimer:</strong> We are an independent service provider and are not affiliated with any of the brands. CedCoss TV Solution provides digital streaming subscription management and device configuration assistance. All brand names, trademarks, logos, and registered emblems referenced on this site are the exclusive intellectual property of their rightful corporate owners. Displaying these names denotes technical hardware compatibility and does not imply official endorsement, direct sponsorship, or corporate affiliation.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span class="dynamic-year"></span> CedCoss TV Solution. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund-policy.html">Refunds</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/plans-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
