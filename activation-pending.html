@@ -435,16 +435,29 @@
         <span>Concierge Specialists Are Online Now</span>
       </div>
 
-    <a href="javascript:void(0);"
+  <a href="#"
    class="pending-btn"
-   id="conciergeActionBtn"
-   onclick="Tawk_API.maximize();">
+   id="conciergeActionBtn">
   <span>Need Faster Help? Connect With Us</span>
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2.5"
+       stroke-linecap="round" stroke-linejoin="round">
     <line x1="5" y1="12" x2="19" y2="12"></line>
     <polyline points="12 5 19 12 12 19"></polyline>
   </svg>
 </a>
+
+<script>
+document.getElementById("conciergeActionBtn").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  if (typeof Tawk_API !== "undefined" && typeof Tawk_API.maximize === "function") {
+    Tawk_API.maximize();
+  } else {
+    console.log("Tawk.to is not loaded yet.");
+  }
+});
+</script>
 
       <a href="activationhelp.html" class="try-again-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
